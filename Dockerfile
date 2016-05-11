@@ -9,7 +9,7 @@ FROM debian:latest
 
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
-ENV GRAFANA_VERSION grafana_2.1.2
+ENV GRAFANA_VERSION grafana_3.0.1
 WORKDIR /etc/grafana/ 
 
 # Update & install packages for graylog
