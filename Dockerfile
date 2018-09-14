@@ -9,14 +9,14 @@ FROM debian:latest
 
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
-ENV GRAFANA_VERSION grafana_3.0.1
+ENV GRAFANA_VERSION 5.2.3
 WORKDIR /etc/grafana/ 
 
-# Update & install packages for graylog
+# Update & install packages for grafana
 RUN apt-get update && \
     apt-get install -y wget dpkg-dev adduser libfontconfig
-RUN wget --no-check-certificate https://grafanarel.s3.amazonaws.com/builds/${GRAFANA_VERSION}_amd64.deb && \
-    dpkg -i ${GRAFANA_VERSION}_amd64.deb
+RUN wget --no-check-certificate https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_${GRAFANA_VERSION}_amd64.deb && \
+    dpkg -i grafana_${GRAFANA_VERSION}_amd64.deb
 
 #Configure grafana
 ADD defaults.ini /etc/grafana/conf/
