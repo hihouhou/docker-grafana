@@ -9,7 +9,7 @@ FROM debian:latest
 
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
-ENV GRAFANA_VERSION 9.2.2
+ENV GRAFANA_VERSION 9.2.3
 WORKDIR /etc/grafana/ 
 
 # Update & install packages for grafana
