@@ -9,7 +9,7 @@ FROM debian:latest
 
 LABEL org.opencontainers.image.authors="hihouhou < hihouhou@hihouhou.com >"
 
-ENV GRAFANA_VERSION=v12.3.2+security-01
+ENV GRAFANA_VERSION=v12.3.3
 WORKDIR /etc/grafana/ 
 
 # Update & install packages for grafana
